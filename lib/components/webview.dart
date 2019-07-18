@@ -29,7 +29,7 @@ class _WebviewPageState extends State<WebviewPage> {
     });
   }
 
-  Future initVideo() {
+  void initVideo() {
     String initjs = """
         var createElement = document.createElement;
         document.createElement = function (tag) {
@@ -47,7 +47,7 @@ class _WebviewPageState extends State<WebviewPage> {
     flutterWebViewPlugin.evalJavascript(initjs);
   }
 
-  Future getSrc() {
+  void getSrc() {
     String script = """
       document.getElementById('video').webkitEnterFullscreen()
       document.getElementById('video').src
