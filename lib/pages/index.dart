@@ -7,6 +7,8 @@ class HomePage extends StatelessWidget {
 
     String txlogo = 'assets/txlogo.png';
     String iqiyi = 'assets/iqiyilogo.png';
+    String mglogo = 'assets/mglogo.png';
+    String lelogo = 'assets/lelogo.png';
 
     return new Scaffold(
         appBar: new AppBar(
@@ -19,8 +21,8 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 new MyButton('腾讯视频', to: 'https://m.v.qq.com', logo: txlogo),
                 new MyButton('爱奇艺', to: 'https://m.iqiyi.com', logo: iqiyi),
-                new MyButton('芒果TV', to: 'https://m.mgtv.com'),
-                new MyButton('乐视TV', to: 'http://m.le.com/'),
+                new MyButton('芒果TV', to: 'https://m.mgtv.com', logo: mglogo),
+                new MyButton('乐视TV', to: 'http://m.le.com/',logo: lelogo),
               ]),
           padding: new EdgeInsets.all(15.0),
         ));
@@ -63,9 +65,9 @@ class MyButton extends StatelessWidget {
               borderRadius: const BorderRadius.all(const Radius.circular(4.0))),
           width: 80.0,
           height: 80.0,
-          margin: new EdgeInsets.only(bottom: 5.0),
+          margin: new EdgeInsets.only(bottom: 3.0),
           child: new Center(
-            child: logo is String ? new Image.asset(logo) : new Text(data)
+            child: logo is String ? new Image.asset(logo,width: 60.0,) : new Text(data)
           ),
         ),
         new Text(data, style: _buttonStyle)

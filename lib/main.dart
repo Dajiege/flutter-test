@@ -8,12 +8,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: '测试',
+      debugShowCheckedModeBanner: false,
       theme: new ThemeData(
         primaryColor: Color.fromRGBO(255, 255, 255, 1),
       ),
-      routes: {
-        '/': (_) => new HomePage()
-      },
+      routes: {'/': (_) => new HomePage()},
     );
   }
 }
